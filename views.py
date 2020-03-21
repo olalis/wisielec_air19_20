@@ -33,6 +33,7 @@ def quiz():
 
     pytania = Pytanie.select().join(Odpowiedz).distinct().order_by(Pytanie.id)
     return render_template('quiz.html', query = pytania)
+    #return render_template('quiz.html', query = pytania , wynik=wynik)
 
 def flash_errors(form):
     """Odczytanie wszystkich błędów formularza i przygotowanie komunikatów"""
